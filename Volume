@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float r, h, baseArea, volume;
+
+    printf("1. Cone\n2. Pyramid\n3. Prism\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Enter radius and height: ");
+            scanf("%f%f", &r, &h);
+            volume = (1.0/3.0) * 3.14159 * r * r * h;
+            printf("Volume = %.2f\n", volume);
+            break;
+
+        case 2:
+            printf("Enter base area and height: ");
+            scanf("%f%f", &baseArea, &h);
+            volume = (1.0/3.0) * baseArea * h;
+            printf("Volume = %.2f\n", volume);
+            break;
+
+        case 3:
+            printf("Enter base area and height: ");
+            scanf("%f%f", &baseArea, &h);
+            volume = baseArea * h;
+            printf("Volume = %.2f\n", volume);
+            break;
+
+        default:
+            printf("Invalid choice\n");
+    }
+
+    return 0;
+}
