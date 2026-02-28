@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int num, divisor;
+
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    printf("Enter divisor: ");
+    scanf("%d", &divisor);
+
+    if(divisor == 0) {
+        printf("Error! Division by zero is not allowed.\n");
+    }
+    else if(num % divisor == 0) {
+        printf("The number is divisible.\n");
+    }
+    else {
+        printf("The number is NOT divisible.\n");
+    }
+
+    return 0;
+}
