@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    float a, b;
+
+    printf("Enter two sides: ");
+    scanf("%f%f", &a, &b);
+
+    if(a == b)
+        printf("Square\n");
+    else
+        printf("Rectangle\n");
+
+    return 0;
+}
