@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    float salary, increment = 0;
+    int rating;
+
+    printf("Enter current salary: ");
+    scanf("%f", &salary);
+
+    printf("Enter performance rating (1-5): ");
+    scanf("%d", &rating);
+
+    switch(rating) {
+        case 5: increment = salary * 0.20; break;
+        case 4: increment = salary * 0.15; break;
+        case 3: increment = salary * 0.10; break;
+        case 2: increment = salary * 0.05; break;
+        case 1: increment = 0; break;
+        default:
+            printf("Invalid rating\n");
+            return 0;
+    }
+
+    printf("Increment = %.2f\n", increment);
+    printf("New Salary = %.2f\n", salary + increment);
+
+    return 0;
+}
