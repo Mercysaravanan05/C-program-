@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int d, m, y, days = 0;
+
+    printf("Enter date (DD MM YYYY): ");
+    scanf("%d %d %d", &d, &m, &y);
+
+    if(d<=0 || m<=0 || m>12 || y<=0) {
+        printf("Invalid date\n");
+        return 0;
+    }
+
+    // Quarter calculation
+    if(m>=1 && m<=3)
+        days = (m-1)*30 + d;
+    else if(m>=4 && m<=6)
+        days = (m-4)*30 + d;
+    else if(m>=7 && m<=9)
+        days = (m-7)*30 + d;
+    else
+        days = (m-10)*30 + d;
+
+    printf("Days passed in quarter: %d\n", days);
+
+    // Season check
+    if((m==3 && d>=1) || (m==4) || (m==5) || (m==6 && d<=0))
+        printf("Season: Spring\n");
+    else if((m==6 && d>=1) || m==7 || m==8)
+        printf("Season: Summer\n");
+    else if(m==9 || m==10 || (m==11 && d<=30))
+        printf("Season: Autumn\n");
+    else
+        printf("Season: Winter\n");
+
+    return 0;
+}
