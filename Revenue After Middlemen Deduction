@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float price, total, deduction = 0;
+    int quantity;
+    char middle;
+
+    printf("Enter selling price per unit: ");
+    scanf("%f", &price);
+
+    printf("Enter quantity sold: ");
+    scanf("%d", &quantity);
+
+    printf("Enter middleman (A/B/C): ");
+    scanf(" %c", &middle);
+
+    total = price * quantity;
+
+    if(middle=='A')
+        deduction = total * 0.10;
+    else if(middle=='B')
+        deduction = total * 0.15;
+    else if(middle=='C')
+        deduction = total * 0.20;
+
+    printf("Original Amount = %.2f\n", total);
+    printf("After Deduction = %.2f\n", total - deduction);
+
+    return 0;
+}
