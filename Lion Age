@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float age;
+
+    printf("Enter lion's age: ");
+    scanf("%f", &age);
+
+    if(age < 0 || age > 26) {
+        printf("Invalid age (Maximum 26 years)\n");
+        return 0;
+    }
+
+    if(age < 2)
+        printf("Cub: %.2f years\n", age);
+    else if(age < 4)
+        printf("Juvenile: %.2f years\n", age);
+    else if(age < 8)
+        printf("Subadult: %.2f years\n", age);
+    else if(age < 15)
+        printf("Young Adult: %.2f years\n", age);
+    else
+        printf("Old Adult: %.2f years\n", age);
+
+    return 0;
+}
