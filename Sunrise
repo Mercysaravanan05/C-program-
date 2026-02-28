@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int month;
+
+    printf("Enter month (1-12): ");
+    scanf("%d", &month);
+
+    switch(month) {
+        case 1: case 2: case 10: case 11: case 12:
+            printf("Sunrise: 7:00 AM\n");
+            printf("Sunset: 5:30 PM\n");
+            break;
+
+        case 3:
+            printf("Sunrise: 6:30 AM\n");
+            printf("Sunset: 6:30 PM\n");
+            break;
+
+        case 4: case 5: case 6: case 7: case 8:
+            printf("Sunrise: 5:30 AM\n");
+            printf("Sunset: 7:30 PM\n");
+            break;
+
+        case 9:
+            printf("Sunrise: 6:30 AM\n");
+            printf("Sunset: 6:00 PM\n");
+            break;
+
+        default:
+            printf("Invalid month!\n");
+    }
+
+    return 0;
+}
