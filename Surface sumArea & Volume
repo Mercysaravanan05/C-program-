@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int choice;
+    float r, h, side;
+
+    printf("1. Sphere\n2. Cube\n3. Cylinder\n");
+    printf("Choose shape: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Enter radius: ");
+            scanf("%f", &r);
+            printf("Surface Area = %.2f\n", 4*3.14159*r*r);
+            printf("Volume = %.2f\n", (4.0/3.0)*3.14159*r*r*r);
+            break;
+
+        case 2:
+            printf("Enter side: ");
+            scanf("%f", &side);
+            printf("Surface Area = %.2f\n", 6*side*side);
+            printf("Volume = %.2f\n", side*side*side);
+            break;
+
+        case 3:
+            printf("Enter radius and height: ");
+            scanf("%f%f", &r, &h);
+            printf("Surface Area = %.2f\n", 2*3.14159*r*(r+h));
+            printf("Volume = %.2f\n", 3.14159*r*r*h);
+            break;
+
+        default:
+            printf("Invalid choice\n");
+    }
+
+    return 0;
+}
