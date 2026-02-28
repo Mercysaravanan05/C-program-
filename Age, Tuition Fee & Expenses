@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    float tuition, expenses;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter annual tuition fee: ");
+    scanf("%f", &tuition);
+
+    printf("Enter total annual expenses: ");
+    scanf("%f", &expenses);
+
+    if(age >= 18 && age <= 25) {
+        if(tuition > expenses)
+            printf("Tuition fee is higher than expenses.\n");
+        else
+            printf("Expenses are higher or equal to tuition fee.\n");
+    } else {
+        printf("Age not in 18-25 range.\n");
+    }
+
+    return 0;
+}
