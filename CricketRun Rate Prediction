@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float score, overs, runrate, percentage;
+
+    printf("Enter total score: ");
+    scanf("%f", &score);
+
+    printf("Enter total overs played: ");
+    scanf("%f", &overs);
+
+    if(overs == 0) {
+        printf("Invalid overs\n");
+        return 0;
+    }
+
+    runrate = score / overs;
+    percentage = (runrate / 6.0) * 100;   // assuming 6 runs per over ideal
+
+    printf("Percentage = %.2f%%\n", percentage);
+
+    if(percentage < 50)
+        printf("Opponent team can win\n");
+    else if(percentage == 50)
+        printf("Equal chance for both teams\n");
+    else
+        printf("Batting team can win\n");
+
+    return 0;
+}
